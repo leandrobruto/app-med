@@ -19,12 +19,19 @@ from django.urls import path
 from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static
-from prescricoes.api.viewsets import PrescricoesViewSet
+
+from medicos.api.viewsets import MedicosViewSet
 from pacientes.api.viewsets import PacientesViewSet
+from medicamentos.api.viewsets import MedicamentosViewSet
+from aprazamentos.api.viewsets import AprazamentosViewSet
+from prescricoes.api.viewsets import PrescricoesViewSet
 
 router = routers.DefaultRouter()
 router.register(r'prescricoes', PrescricoesViewSet)
+router.register(r'medicos', MedicosViewSet)
 router.register(r'pacientes', PacientesViewSet)
+router.register(r'medicamentos', MedicamentosViewSet)
+router.register(r'aprazamentos', AprazamentosViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
