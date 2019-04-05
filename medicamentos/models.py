@@ -1,12 +1,14 @@
 from django.db import models
-from aprazamentos.models import Aprazamento
+from prescricoes.models import Prescricao
+
 
 # Create your models here.
 
 
 class Medicamento(models.Model):
-    descricao = models.CharField(max_length=150)
-    aprazamento = models.ForeignKey(Aprazamento, on_delete=models.CASCADE)
+    prescricao = models.ForeignKey(Prescricao, related_name="medicamentos", on_delete=models.CASCADE)
+    medicamento = models.CharField(max_length=150)
+    anotacoes = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return self.descricao
+        return self.medicamento

@@ -20,20 +20,28 @@ from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static
 
+from accounts.views import CustomObtainAuthToken
+from accounts.api.viewsets import AccountsViewSet
 from medicos.api.viewsets import MedicosViewSet
 from pacientes.api.viewsets import PacientesViewSet
 from medicamentos.api.viewsets import MedicamentosViewSet
 from aprazamentos.api.viewsets import AprazamentosViewSet
 from prescricoes.api.viewsets import PrescricoesViewSet
+from teste.api.viewsets import TesteViewSet
 
 router = routers.DefaultRouter()
+router.register(r'cadastro', AccountsViewSet)
+# router.register(r'autenticate', CustomObtainAuthToken)
 router.register(r'prescricoes', PrescricoesViewSet)
 router.register(r'medicos', MedicosViewSet)
 router.register(r'pacientes', PacientesViewSet)
 router.register(r'medicamentos', MedicamentosViewSet)
 router.register(r'aprazamentos', AprazamentosViewSet)
+router.register(r'teste', TesteViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
+    path('rest-auth/', include('rest_auth.urls')),
+    path(r'authenticate/', CustomObtainAuthToken.as_view()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

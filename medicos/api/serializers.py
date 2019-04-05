@@ -6,4 +6,4 @@ class MedicoSerializer(ModelSerializer):
     class Meta:
         model = Medico
         fields = (
-            'id', 'nome', 'crm')
+            'usuario', 'crm', 'cpf')

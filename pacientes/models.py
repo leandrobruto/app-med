@@ -5,8 +5,8 @@ from django.db import models
 
 class Paciente(models.Model):
     nome = models.CharField(max_length=150)
-    leito = models.IntegerField()
-    prontuario = models.IntegerField()
+    prontuario = models.IntegerField(null=True, blank=True)
+    leito = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.nome
