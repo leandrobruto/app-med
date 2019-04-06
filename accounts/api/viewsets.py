@@ -14,7 +14,7 @@ class AccountsViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = AccountSerializer
     filter_backends = (DjangoFilterBackend,)
-    filter_fields = ('id', 'usuario', 'roles', )
+    filter_fields = ('id', 'usuario', 'nome', 'roles', )
 
 
 class CustomObtainAuthToken(ObtainAuthToken):

@@ -12,7 +12,7 @@ class AccountSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'usuario', 'nome', 'credencial', 'roles', 'password', 'is_staff')
+            'id', 'usuario', 'nome', 'credencial', 'roles', 'password', 'is_staff')
         write_only_fields = ('password',)
         read_only_fields = ('id', )
 
