@@ -30,8 +30,7 @@ from prescricoes.api.viewsets import PrescricoesViewSet
 from teste.api.viewsets import TesteViewSet
 
 router = routers.DefaultRouter()
-router.register(r'cadastro', AccountsViewSet)
-# router.register(r'autenticate', CustomObtainAuthToken)
+router.register(r'usuario', AccountsViewSet)
 router.register(r'prescricoes', PrescricoesViewSet)
 router.register(r'medicos', MedicosViewSet)
 router.register(r'pacientes', PacientesViewSet)
