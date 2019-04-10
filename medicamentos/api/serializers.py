@@ -12,7 +12,8 @@ class MedicamentoSerializer(ModelSerializer):
     class Meta:
         model = Medicamento
         fields = (
-            'prescricao', 'medicamento', 'aprazamentos', 'anotacoes')
+            'id', 'prescricao', 'medicamento', 'aprazamentos', 'anotacoes')
+        read_only_fields = ('id',)
 
     def create(self, validated_data):
         aprazamentos_data = validated_data.pop('aprazamentos')

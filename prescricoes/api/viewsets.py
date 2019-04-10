@@ -1,3 +1,4 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from django.http import HttpResponse
 from rest_framework.decorators import action
 from rest_framework.viewsets import ModelViewSet
@@ -11,6 +12,8 @@ class PrescricoesViewSet(ModelViewSet):
     """
     queryset = Prescricao.objects.all()
     serializer_class = PrescricaoSerializer
+    filter_backends = (DjangoFilterBackend,)
+    filter_fields = ('paciente', )
 
     @action(methods=['post'], detail=True)
     def associa_paciente(self, request, id):

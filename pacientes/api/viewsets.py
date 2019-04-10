@@ -9,3 +9,4 @@ class PacientesViewSet(ModelViewSet):
     """
     queryset = Paciente.objects.all()
     serializer_class = PacienteSerializer
+

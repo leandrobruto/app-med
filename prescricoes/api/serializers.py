@@ -11,25 +11,26 @@ from accounts.models import User
 
 class PrescricaoSerializer(ModelSerializer):
     # paciente = AccountSerializer(read_only=True)
-    medicamentos = MedicamentoSerializer(many=True)
-    aprazamentos = AprazamentoSerializer(many=True)
+    medicamentos = MedicamentoSerializer(many=True, read_only=True)
+    aprazamentos = AprazamentoSerializer(many=True, read_only=True)
 
     class Meta:
         model = Prescricao
         fields = (
-            'paciente', 'medicamentos', 'aprazamentos', 'created', 'foto')
+            'id', 'paciente', 'medicamentos', 'aprazamentos', 'created', 'foto')
+        read_only_fields = ('id',)
 
     # def cria_medicamentos(self, medicamentos, prescricao):
     #     for medicamento in medicamentos:
     #         med = Medicamento.objects.create(**medicamento)
     #         prescricao.medicamentos.add(med)
     #
-    def create(self, validated_data):
-        medicamentos_data = validated_data.pop('medicamentos')
-        aprazamentos_data = validated_data.pop('aprazamentos')
-        prescricao = Prescricao.objects.create(**validated_data)
-        for medicamento_data in medicamentos_data:
-            medicamento = Medicamento.objects.create(prescricao=prescricao, **medicamento_data)
-            for aprazamento_data in aprazamentos_data:
-                Aprazamento.objects.create(medicamento=medicamento, **aprazamento_data)
-        return prescricao
+    # def create(self, validated_data):
+    #     medicamentos_data = validated_data.pop('medicamentos')
+    #     aprazamentos_data = validated_data.pop('aprazamentos')
+    #     prescricao = Prescricao.objects.create(**validated_data)
+    #     for medicamento_data in medicamentos_data:
+    #         medicamento = Medicamento.objects.create(prescricao=prescricao, **medicamento_data)
+    #         for aprazamento_data in aprazamentos_data:
+    #             Aprazamento.objects.create(medicamento=medicamento, **aprazamento_data)
+    #     return prescricao
