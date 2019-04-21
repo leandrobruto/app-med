@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="61ea65ab-d9a5-4877-9298-711790a56479" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aprazamentos/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/aprazamentos/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aprazamentos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/aprazamentos/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/med_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/med_app/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/medicamentos/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/medicamentos/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pacientes/api/viewsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/pacientes/api/viewsets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prescricoes/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/prescricoes/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prescricoes/api/viewsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/prescricoes/api/viewsets.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,22 +20,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/accounts/api/viewsets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="170">
+              <caret line="16" column="56" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="56" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pacientes/api/viewsets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,17 +44,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/med_app/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="103" />
+            <state relative-caret-position="-1576">
+              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prescricoes/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/medicamentos/api/serializers.py">
+        <entry file="file://$PROJECT_DIR$/aprazamentos/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            <state relative-caret-position="255">
+              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aprazamentos/api/viewsets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aprazamentos/api/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
@@ -75,10 +93,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pacientes/api/serializers.py">
+        <entry file="file://$PROJECT_DIR$/medicamentos/api/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+            <state relative-caret-position="255">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,7 +133,6 @@
         <option value="$PROJECT_DIR$/pacientes/admin.py" />
         <option value="$PROJECT_DIR$/medicos/api/viewsets.py" />
         <option value="$PROJECT_DIR$/aprazamentos/admin.py" />
-        <option value="$PROJECT_DIR$/aprazamentos/api/viewsets.py" />
         <option value="$PROJECT_DIR$/medicamentos/admin.py" />
         <option value="$PROJECT_DIR$/medicamentos/api/viewsets.py" />
         <option value="$PROJECT_DIR$/medicos/api/serializers.py" />
@@ -125,15 +145,12 @@
         <option value="$PROJECT_DIR$/accounts/forms.py" />
         <option value="$PROJECT_DIR$/teste/admin.py" />
         <option value="$PROJECT_DIR$/teste/models.py" />
-        <option value="$PROJECT_DIR$/aprazamentos/models.py" />
         <option value="$PROJECT_DIR$/pacientes/models.py" />
         <option value="$PROJECT_DIR$/pacientes/api/serializers.py" />
         <option value="$PROJECT_DIR$/teste/api/viewsets.py" />
         <option value="$PROJECT_DIR$/teste/api/serializers.py" />
         <option value="$PROJECT_DIR$/prescricoes/models.py" />
-        <option value="$PROJECT_DIR$/aprazamentos/api/serializers.py" />
         <option value="$PROJECT_DIR$/medicamentos/models.py" />
-        <option value="$PROJECT_DIR$/med_app/settings.py" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
         <option value="$PROJECT_DIR$/accounts/api/viewsets.py" />
         <option value="$PROJECT_DIR$/accounts/models.py" />
@@ -143,6 +160,10 @@
         <option value="$PROJECT_DIR$/prescricoes/api/viewsets.py" />
         <option value="$PROJECT_DIR$/prescricoes/api/serializers.py" />
         <option value="$PROJECT_DIR$/medicamentos/api/serializers.py" />
+        <option value="$PROJECT_DIR$/aprazamentos/models.py" />
+        <option value="$PROJECT_DIR$/med_app/settings.py" />
+        <option value="$PROJECT_DIR$/aprazamentos/api/serializers.py" />
+        <option value="$PROJECT_DIR$/aprazamentos/api/viewsets.py" />
       </list>
     </option>
   </component>
@@ -158,7 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,29 +189,35 @@
             <path>
               <item name="med_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="med_app" type="462c0819:PsiDirectoryNode" />
-              <item name="medicamentos" type="462c0819:PsiDirectoryNode" />
+              <item name="aprazamentos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="med_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="med_app" type="462c0819:PsiDirectoryNode" />
-              <item name="medicamentos" type="462c0819:PsiDirectoryNode" />
+              <item name="aprazamentos" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="med_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="med_app" type="462c0819:PsiDirectoryNode" />
-              <item name="prescricoes" type="462c0819:PsiDirectoryNode" />
+              <item name="med_app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="med_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="med_app" type="462c0819:PsiDirectoryNode" />
-              <item name="prescricoes" type="462c0819:PsiDirectoryNode" />
+              <item name="medicamentos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="med_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="med_app" type="462c0819:PsiDirectoryNode" />
+              <item name="medicamentos" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -224,7 +250,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.makemigrations">
+  <component name="RunManager" selected="Python.migrate">
     <configuration name="makemigrations" type="PythonConfigurationType" factoryName="Python">
       <module name="med_app" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -375,13 +401,6 @@
     <entry file="file://$PROJECT_DIR$/medicamentos/api/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/aprazamentos/api/viewsets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/forms.py" />
     <entry file="file://$PROJECT_DIR$/users/admin.py" />
     <entry file="file://$PROJECT_DIR$/users/models.py" />
@@ -499,13 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/medicamentos/api/viewsets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/teste/api/viewsets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -517,33 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prescricoes/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aprazamentos/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aprazamentos/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -596,33 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/medicamentos/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pacientes/api/viewsets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/med_app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#631#663#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pacientes/api/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -640,13 +598,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/api/viewsets.py">
+    <entry file="file://$PROJECT_DIR$/accounts/api/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -660,26 +615,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/api/serializers.py">
+    <entry file="file://$PROJECT_DIR$/pacientes/api/viewsets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/med_app/settings.py">
+    <entry file="file://$PROJECT_DIR$/medicamentos/api/viewsets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="103" />
+        <state relative-caret-position="136">
+          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/api/viewsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="56" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/med_app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#631#663#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/medicamentos/api/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="255">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="34" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/medicamentos/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/med_app/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1576">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aprazamentos/api/viewsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prescricoes/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aprazamentos/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aprazamentos/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>

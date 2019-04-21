@@ -6,13 +6,13 @@ from aprazamentos.models import Aprazamento
 
 
 class MedicamentoSerializer(ModelSerializer):
-    # paciente = AccountSerializer
+    paciente = AccountSerializer(read_only=True)
     aprazamentos = AprazamentoSerializer(many=True)
 
     class Meta:
         model = Medicamento
         fields = (
-            'id', 'prescricao', 'medicamento', 'aprazamentos', 'anotacoes')
+            'id', 'prescricao', 'paciente', 'medicamento', 'aprazamentos', 'anotacoes')
         read_only_fields = ('id',)
 
     def create(self, validated_data):

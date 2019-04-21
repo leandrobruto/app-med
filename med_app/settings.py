@@ -26,7 +26,8 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['med-apps.herokuapp.com', 'localhost', '192.168.1.10', '192.168.1.11', '172.16.102.189']
+ALLOWED_HOSTS = ['med-apps.herokuapp.com', 'localhost', '192.168.1.10', '192.168.1.11', '172.16.102.189',
+                 '192.168.0.103']
 
 
 # Application definition
