@@ -17,7 +17,7 @@ class PrescricaoSerializer(ModelSerializer):
     class Meta:
         model = Prescricao
         fields = (
-            'id', 'paciente', 'medicamentos', 'aprazamentos', 'created', 'foto')
+            'id', 'paciente', 'leito', 'medicamentos', 'aprazamentos', 'created', 'foto')
         read_only_fields = ('id',)
 
     # def cria_medicamentos(self, medicamentos, prescricao):

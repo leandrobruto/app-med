@@ -16,6 +16,7 @@ class MedicamentoSerializer(ModelSerializer):
         read_only_fields = ('id',)
 
     def create(self, validated_data):
+        print(validated_data)
         aprazamentos_data = validated_data.pop('aprazamentos')
         medicamento = Medicamento.objects.create(**validated_data)
         for aprazamento_data in aprazamentos_data:

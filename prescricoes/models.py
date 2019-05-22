@@ -6,6 +6,7 @@ from accounts.models import User
 
 class Prescricao(models.Model):
     paciente = models.ForeignKey(User, on_delete=models.CASCADE)
+    leito = models.IntegerField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     foto = models.ImageField(upload_to='prescricoes', null=True, blank=True)
 

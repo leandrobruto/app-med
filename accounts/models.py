@@ -79,6 +79,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
     usuario = models.CharField('Usuário', max_length=14, unique=True)
     nome = models.CharField('Nome de Usuário', max_length=80, blank=True)
+    nome_mae = models.CharField('Nome da mãe', max_length=80, null=True, blank=True)
     credencial = models.CharField('Número do Conselho', max_length=10, blank=True)
     roles = models.CharField('Tipo', max_length=15, choices=ROLE_CHOICES, default=MEDICO)
     is_active = models.BooleanField('Ativo', blank=True, default=True)
