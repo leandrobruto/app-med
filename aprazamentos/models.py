@@ -6,6 +6,7 @@ from medicamentos.models import Medicamento
 
 class Aprazamento(models.Model):
     medicamento = models.ForeignKey(Medicamento, related_name='aprazamentos', on_delete=models.CASCADE)
+    erro = models.CharField(max_length=20, null=True, blank=True)
     data_programada = models.DateField()
     hora_programada = models.TimeField()
     data_aplicacao = models.DateField(null=True, blank=True)
