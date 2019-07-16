@@ -20,23 +20,23 @@ def listar_usuarios(request):
     return render(request, 'usuarios.html', context)
 
 class listaUsuarios(ListView):
-    template_name = 'usuarios.html'
+    template_name = 'usuario/usuarios.html'
     model = User
     context_object_name = 'usuarios'
 
 class addUsuario(CreateView):
     model = User
-    template_name = 'usuario_add.html'
+    template_name = 'usuario/add.html'
     fields = ['usuario', 'nome', 'nome_mae', 'credencial', 'roles', 'is_active', 'is_staff']
     success_url = '/usuarios'
 
 class editarUsuario(UpdateView):
     model = User
-    template_name = 'usuario_editar.html'
+    template_name = 'usuario/editar.html'
     fields = ['usuario', 'nome', 'nome_mae', 'credencial', 'roles', 'is_active', 'is_staff']
     success_url = '/usuarios'
 
 class deletarUsuario(DeleteView):
     model = User
-    template_name = 'usuario_deletar.html'
+    template_name = 'usuario/deletar.html'
     success_url = '/usuarios'
