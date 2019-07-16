@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Excluir Paciente{% endblock %} 
+{% block content %}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Tem certeza que deseja excluir {{paciente}}?</h5>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{form|crispy}}
+                        <input type="submit" value="Deletar" class="btn btn-danger"/>
+                        <a type="btn" class="btn btn-default" href="{% url 'pacientes' %}">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

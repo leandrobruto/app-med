@@ -54,6 +54,9 @@ INSTALLED_APPS = [
     'medicamentos',
     'aprazamentos',
     'prescricoes',
+
+    'core',
+    'crispy_forms'
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
@@ -73,7 +76,7 @@ ROOT_URLCONF = 'med_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -141,3 +144,6 @@ MEDIA_ROOT = 'imagens'
 MEDIA_URL = '/media/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+#crispy forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

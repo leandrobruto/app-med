@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}Usuários{% endblock %} 
+{% block content %}
+<div class="container">
+    <div class="row justify-content-md-end">
+        <a type="btn" class="btn btn-primary" href="{% url 'add_usuario' %}">Adicionar</a>
+    </div>
+    <hr>
+    <div class="row justify-content-md-center">
+        {% if usuarios %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Nome da Mãe</th>
+                        <th scope="col">N Conselho</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for usuario in usuarios %}
+                        <tr>
+                            <th scope="row">{{usuario.usuario}}</th>
+                            <td>{{usuario.nome}}</td>
+                            <td>{{usuario.nome_mae}}</td>
+                            <td>{{usuario.credencial}}</td>
+                            <td>{{usuario.roles}}</td>
+                            <td>
+                                <a type="btn" class="btn btn-default" href="{% url 'editar_usuario' usuario.id %}">editar</a>
+                                <a type="btn" class="btn btn-danger" href="{% url 'deletar_usuario' usuario.id %}">excluir</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="alert alert-info" role="alert">
+                Ainda não há usuários cadastrados.
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

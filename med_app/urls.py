@@ -39,7 +39,10 @@ router.register(r'aprazamentos', AprazamentosViewSet)
 router.register(r'teste', TesteViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', include('core.urls')),
+    path('pacientes/', include('pacientes.urls')),
+    path('usuarios/', include('accounts.urls')),
+    path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('rest-auth/', include('rest_auth.urls')),
     path(r'authenticate/', CustomObtainAuthToken.as_view()),
