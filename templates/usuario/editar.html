@@ -11,8 +11,8 @@
                     <form action="" method="POST">
                         {% csrf_token %}
                         {{form|crispy}}
-                        <input type="submit" value="Editar" class="btn btn-success"/>
-                        <a type="btn" class="btn btn-default" href="{% url 'usuarios' %}">Cancelar</a>
+                        <input type="submit" value="Editar" class="btn btn-sm btn-success"/>
+                        <a type="btn" class="btn btn-sm btn-default" href="{% url 'usuarios' %}">Cancelar</a>
                     </form>
                 </div>
             </div>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Adicionar Médico{% endblock %} 
+{% block content %}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Adicionar Médico</h5>
+                    <hr>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{form|crispy}}
+                        <input type="submit" value="Adicionar" class="btn btn-sm btn-success"/>
+                        <a type="btn" class="btn btn-sm btn-default" href="{% url 'medicos' %}">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

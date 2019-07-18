@@ -1,0 +1,24 @@
+{% extends 'base.html' %} 
+{% load crispy_forms_tags %}
+{% block title %}App Med{% endblock %} 
+{% block content %}
+<div class="container">
+	<div class="row justify-content-around">
+		<div class="col-4">
+			<div class="text-center">
+				<form class="text-center" action="" method="POST">
+					<img class="mb-4" src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb---cone-de-perfil-de-usu--rio-azul-by-vexels.png" alt="" width="72" height="72">
+					<p class="h4 mb-4">AppMed</p>
+
+					<!-- Form -->
+					{% csrf_token %}
+					{{form|crispy}}
+
+					<!-- Sign in button -->
+					<button class="btn btn-info btn-block my-4" type="submit">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

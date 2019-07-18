@@ -40,10 +40,14 @@ router.register(r'teste', TesteViewSet)
 
 urlpatterns = [
     path('', include('core.urls')),
-    path('pacientes/', include('pacientes.urls')),
-    path('usuarios/', include('accounts.urls')),
     path('api/', include(router.urls)),
+    path('usuarios/', include('accounts.urls')),
+    path('pacientes/', include('pacientes.urls')),
+    path('medicos/', include('medicos.urls')),
+    path('prescricoes/', include('prescricoes.urls')),
+    path('aprazamentos/', include('aprazamentos.urls')),
     path('admin/', admin.site.urls),
     path('rest-auth/', include('rest_auth.urls')),
+    path('', include('django.contrib.auth.urls')),
     path(r'authenticate/', CustomObtainAuthToken.as_view()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

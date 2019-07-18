@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}Medicos{% endblock %} 
+{% block content %}
+<div class="container">
+    <div class="row justify-content-md-end">
+        <a type="btn" class="btn btn-primary" href="{% url 'add_medico' %}">Adicionar</a>
+    </div>
+    <hr>
+    <div class="row justify-content-md-center">
+        {% if medicos %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Usuário</th>
+                        <th scope="col">CRM</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for medico in medicos %}
+                        <tr>
+                            <td>{{medico.usuario}}</td>
+                            <td>{{medico.crm}}</td>
+                            <td>{{medico.cpf}}</td>
+                            <td>
+                                <a type="btn" class="btn btn-sm btn-default" href="{% url 'editar_medico' medico.id %}">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                                <a type="btn" class="btn btn-sm btn-danger" href="{% url 'deletar_medico' medico.id %}">
+                                    <i class="far fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="alert alert-info" role="alert">
+                Ainda não há médicos cadastrados.
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -14,7 +14,7 @@
                         <th scope="col">Prontuário</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Leito</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,8 +24,12 @@
                             <td>{{paciente.nome}}</td>
                             <td>{{paciente.leito}}</td>
                             <td>
-                                <a type="btn" class="btn btn-default" href="{% url 'editar_paciente' paciente.id %}">editar</a>
-                                <a type="btn" class="btn btn-danger" href="{% url 'deletar_paciente' paciente.id %}">excluir</a>
+                                <a type="btn" class="btn btn-sm btn-default" href="{% url 'editar_paciente' paciente.id %}">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                                <a type="btn" class="btn btn-sm btn-danger" href="{% url 'deletar_paciente' paciente.id %}">
+                                    <i class="far fa-trash-alt"></i>
+                                </a>
                             </td>
                         </tr>
                     {% endfor %}

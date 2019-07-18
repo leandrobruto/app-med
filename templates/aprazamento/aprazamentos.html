@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Aprazamentos{% endblock %} 
+{% block content %}
+<div class="container">
+    <div class="row justify-content-md-end">
+        <a type="btn" class="btn btn-primary" href="#">Adicionar</a>
+    </div>
+    <hr>
+    <div class="row justify-content-md-center">
+        {% if aprazamentos %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Medicamento</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for aprazamento in aprazamentos %}
+                        <tr>
+                            <td>{{aprazamento.data_programada|date:"d/m/Y"}}</td>
+                            <td>{{aprazamento.hora_programada}}</td>
+                            <td>{{aprazamento.medicamento}}</td>
+                            <td>{{aprazamento.status}}</td>
+                            <td>
+                                <a type="btn" class="btn btn-sm btn-default" href="#">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                                <a type="btn" class="btn btn-sm btn-danger" href="#">
+                                    <i class="far fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="alert alert-info" role="alert">
+                Ainda não há prescrições.
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

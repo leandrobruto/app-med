@@ -11,12 +11,12 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">Usuário</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Nome da Mãe</th>
                         <th scope="col">N Conselho</th>
                         <th scope="col">Tipo</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,8 +28,12 @@
                             <td>{{usuario.credencial}}</td>
                             <td>{{usuario.roles}}</td>
                             <td>
-                                <a type="btn" class="btn btn-default" href="{% url 'editar_usuario' usuario.id %}">editar</a>
-                                <a type="btn" class="btn btn-danger" href="{% url 'deletar_usuario' usuario.id %}">excluir</a>
+                                <a type="btn" class="btn btn-sm btn-default" href="{% url 'editar_usuario' usuario.id %}">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                                <a type="btn" class="btn btn-sm btn-danger" href="{% url 'deletar_usuario' usuario.id %}">
+                                    <i class="far fa-trash-alt"></i>
+                                </a>
                             </td>
                         </tr>
                     {% endfor %}

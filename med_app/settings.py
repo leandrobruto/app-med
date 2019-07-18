@@ -147,3 +147,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 #crispy forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+#for authentication
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'home'
