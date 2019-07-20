@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Prescrição{% endblock %} 
+{% block content %}
+<div class="container">
+    <div class="row justify-content-md-end">
+        <a type="btn" class="btn btn-primary" href="#">Adicionar</a>
+    </div>
+    <hr>
+    <div class="row justify-content-md-center">
+        {% if prescricao.medicamentos %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Medicamento</th>
+                        <th scope="col">Anotações</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for medicamento in prescricao.medicamentos %}
+                        <tr>
+                            <td>{{medicamento.medicamento}}</td>
+                            <td>{{medicamento.anotacoes}}</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalAprazamentos{{medicamento.id}}">
+                                    ver
+                                </button>
+                                {% include './partials/_modal_aprazamentos.html' %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="alert alert-info" role="alert">
+                Ainda não há medicamentos.
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

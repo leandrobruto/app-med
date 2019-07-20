@@ -16,6 +16,7 @@
                         <th scope="col">Nome da Mãe</th>
                         <th scope="col">N Conselho</th>
                         <th scope="col">Tipo</th>
+                        <th scope="col">Staff</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -26,7 +27,36 @@
                             <td>{{usuario.nome}}</td>
                             <td>{{usuario.nome_mae}}</td>
                             <td>{{usuario.credencial}}</td>
-                            <td>{{usuario.roles}}</td>
+                            <td>
+                                {% if usuario.roles == "is_medico" %}
+                                    <span class="badge badge-primary">
+                                        <i class="fas fa-user-md"></i> &nbsp;Médico
+                                    </span>
+                                {% elif usuario.roles == "is_enfermagem" %}
+                                    <span class="badge badge-default">
+                                        <i class="fas fa-user-nurse"></i> &nbsp;Enfermagem
+                                    </span>
+                                {% elif usuario.roles == "is_farmacia" %}
+                                    <span class="badge badge-secondary">
+                                        <i class="fas fa-capsules"></i> &nbsp;Farmácia
+                                    </span>
+                                {% elif usuario.roles == "is_paciente" %}
+                                    <span class="badge badge-light">
+                                        <i class="fas fa-user"></i> &nbsp;Paciente
+                                    </span>
+                                {% elif usuario.roles == "is_admin" %}
+                                    <span class="badge badge-danger">
+                                        <i class="fas fa-shield-alt"></i> &nbsp;Admin
+                                    </span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if usuario.is_staff %}
+                                    <i class="fas green-text fa-user-check"></i>
+                                {% else %}
+                                    <i class="fas red-text fa-user-times"></i>
+                                {% endif %}
+                            </td>
                             <td>
                                 <a type="btn" class="btn btn-sm btn-default" href="{% url 'editar_usuario' usuario.id %}">
                                     <i class="far fa-edit"></i>

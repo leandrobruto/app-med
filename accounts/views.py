@@ -13,12 +13,6 @@ class CustomObtainAuthToken(ObtainAuthToken):
         token = Token.objects.get(key=response.data['token'])
         return Response({'key': token.key, 'id': token.user_id})
 
-def listar_usuarios(request):
-    context = {
-        'usuarios': User.objects.all()
-    }
-    return render(request, 'usuarios.html', context)
-
 class listaUsuarios(ListView):
     template_name = 'usuario/usuarios.html'
     model = User

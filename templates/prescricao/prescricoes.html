@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{% block title %}Prescricoes{% endblock %} 
+{% block title %}Prescrições{% endblock %} 
 {% block content %}
 <div class="container">
     <div class="row justify-content-md-end">
-        <a type="btn" class="btn btn-primary" href="#">Adicionar</a>
+        <a type="btn" class="btn btn-primary" href="{% url 'add_prescricao' %}">Adicionar</a>
     </div>
     <hr>
     <div class="row justify-content-md-center">
@@ -20,11 +20,14 @@
                 <tbody>
                     {% for prescricao in prescricoes %}
                         <tr>
-                            <td>{{prescricao.created|date:"d/m/Y - H:i"}}</td>
+                            <td>{{prescricao.created|date:"d/m/Y"}}</td>
                             <td>{{prescricao.paciente.nome}}</td>
                             <td>{{prescricao.leito}}</td>
                             <td>
-                                <a type="btn" class="btn btn-sm btn-default" href="#">
+                                <a type="btn" class="btn btn-sm" href="{% url 'detalhes_prescricao' prescricao.id %}">
+                                    <i class="fas fa-folder-open"></i>
+                                </a>
+                                <a type="btn" class="btn btn-sm btn-default" href="{% url 'editar_prescricao' prescricao.id %}">
                                     <i class="far fa-edit"></i>
                                 </a>
                                 <a type="btn" class="btn btn-sm btn-danger" href="#">

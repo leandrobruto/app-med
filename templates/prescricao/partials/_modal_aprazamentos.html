@@ -1,0 +1,70 @@
+{% load static %}
+<div class="modal fade" id="modalAprazamentos{{medicamento.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+    <div class="modal-dialog modal-full-height modal-top" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{medicamento.medicamento}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Erro</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Hora</th>
+                            <th scope="col">Data da Aplicação</th>
+                            <th scope="col">Hora da Aplicação</th>
+                            <th scope="col">Status</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for aprazamento in medicamento.aprazamentos %}
+                            <tr>
+                                <td>{{aprazamento.id}}</td>
+                                <td>
+                                    {% if not aprazamento.erro %}
+                                        <span class="badge badge-success">Sem erros</span>
+                                    {% else %}
+                                        {{aprazamento.erro}}
+                                    {% endif %}
+                                </td>
+                                <td>{{aprazamento.data_programada}}</td>
+                                <td>{{aprazamento.hora_programada}}</td>
+                                <td>
+                                    {% if not aprazamento.data_aplicacao %}
+                                        <i class="far red-text fa-frown"></i>
+                                    {% else %}
+                                        {{aprazamento.data_aplicacao}}
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if not aprazamento.hora_aplicacao %}
+                                        <i class="far red-text fa-frown"></i>
+                                    {% else %}
+                                        {{aprazamento.hora_aplicacao}}
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if not aprazamento.status %}
+                                        <i class="far red-text fa-frown"></i>
+                                    {% else %}
+                                        <i class="far green-text fa-grin"></i>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
