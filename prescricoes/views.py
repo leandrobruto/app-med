@@ -1,8 +1,10 @@
 import ast
 import urllib.request
 import json
-from django.shortcuts import render
+from django import forms
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Prescricao
+from medicamentos.models import Medicamento
 from django.views.generic import ListView
 from django.views.generic.edit import UpdateView, CreateView
 
@@ -18,7 +20,23 @@ class addPrescricao(CreateView):
     fields = ['paciente', 'leito', 'foto']
     success_url = '/prescricoes'
 
+class MedicamentoForm(forms.ModelForm):
+    class Meta:
+        model = Medicamento
+        fields = ['medicamento']
+
 def detalhes(request, pk):
+    submitted = False
+    if request.method == 'POST':
+        form = MedicamentoForm(request.POST)
+        if form.is_valid():
+            prescricao = get_object_or_404(Prescricao, pk=pk)
+            obj = form.save(commit=False)
+            obj.prescricao = prescricao
+            obj.save()
+    else:
+        form = MedicamentoForm()   
+
     req = urllib.request.Request('http://localhost:8000/api/prescricoes/' + str(pk) + "/")
     req.add_header('Content-Type', 'application/json')
 
@@ -27,7 +45,8 @@ def detalhes(request, pk):
 
     prescricao = json.loads(r.decode("utf-8"))
     context = {
-        'prescricao': prescricao
+        'prescricao': prescricao,
+        'form': form,
     }
 
     return render(request, 'prescricao/detalhes.html', context)
@@ -37,3 +56,9 @@ class editarPrescricao(UpdateView):
     template_name = 'prescricao/editar.html'
     fields = ['paciente', 'leito', 'foto']
     success_url = '/prescricoes'
+
+def deletarMedicamento(request, p, pk):
+    medicamento = get_object_or_404(Medicamento, pk=pk)
+    medicamento.delete()
+    
+    return redirect('detalhes_prescricao', p)

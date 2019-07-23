@@ -15,12 +15,11 @@ aria-hidden="true">
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Erro</th>
-                            <th scope="col">Data</th>
-                            <th scope="col">Hora</th>
-                            <th scope="col">Data da Aplicação</th>
-                            <th scope="col">Hora da Aplicação</th>
-                            <th scope="col">Status</th>
-                            <th scope="col"></th>
+                            <th scope="col" class="text-center">Data</th>
+                            <th scope="col" class="text-center">Hora</th>
+                            <th scope="col" class="text-center">Data da Aplicação</th>
+                            <th scope="col" class="text-center">Hora da Aplicação</th>
+                            <th scope="col" class="text-center">Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,23 +33,23 @@ aria-hidden="true">
                                         {{aprazamento.erro}}
                                     {% endif %}
                                 </td>
-                                <td>{{aprazamento.data_programada}}</td>
-                                <td>{{aprazamento.hora_programada}}</td>
-                                <td>
+                                <td class="text-center">{{aprazamento.data_programada}}</td>
+                                <td class="text-center">{{aprazamento.hora_programada|slice:"0:5"}}</td>
+                                <td class="text-center">
                                     {% if not aprazamento.data_aplicacao %}
                                         <i class="far red-text fa-frown"></i>
                                     {% else %}
                                         {{aprazamento.data_aplicacao}}
                                     {% endif %}
                                 </td>
-                                <td>
+                                <td class="text-center">
                                     {% if not aprazamento.hora_aplicacao %}
                                         <i class="far red-text fa-frown"></i>
                                     {% else %}
-                                        {{aprazamento.hora_aplicacao}}
+                                        {{aprazamento.hora_aplicacao|slice:"0:5"}}
                                     {% endif %}
                                 </td>
-                                <td>
+                                <td class="text-center">
                                     {% if not aprazamento.status %}
                                         <i class="far red-text fa-frown"></i>
                                     {% else %}

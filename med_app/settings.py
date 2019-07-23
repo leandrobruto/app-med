@@ -56,7 +56,8 @@ INSTALLED_APPS = [
     'prescricoes',
 
     'core',
-    'crispy_forms'
+    'crispy_forms',
+    'widget_tweaks'
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
