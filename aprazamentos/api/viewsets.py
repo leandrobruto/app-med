@@ -9,3 +9,4 @@ class AprazamentosViewSet(ModelViewSet):
     """
     queryset = Aprazamento.objects.all()
     serializer_class = AprazamentoSerializer
+    filter_fields = ('id', 'erro',)
