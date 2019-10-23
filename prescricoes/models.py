@@ -8,7 +8,7 @@ class Prescricao(models.Model):
     paciente = models.ForeignKey(User, on_delete=models.CASCADE)
     leito = models.IntegerField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
-    foto = models.ImageField(upload_to='prescricoes', null=True, blank=True)
+    foto = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return self.paciente.nome
