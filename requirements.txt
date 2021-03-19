@@ -9,7 +9,7 @@ Django==2.1.7
 django-allauth==0.39.1
 django-filter==2.1.0
 django-rest-auth==0.9.3
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 djangorestframework-stubs==0.3.0
 gunicorn==19.9.0
 idna==2.8
